@@ -1,0 +1,21 @@
+{
+  "name": "generico_tailwind",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/css/style.css -o ./src/css/output.css --watch",
+    "serve": "live-server --watch=./",
+    "start": "concurrently \"npm run dev\" \"npm run serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.1",
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "tailwindcss": "^4.1.1"
+  }
+}
