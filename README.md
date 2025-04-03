@@ -26,7 +26,7 @@ Após isso, será necessário rodar o TailwindCSS e o LiveService. O LiveService
 
 `npm start`
 
-Em seguida, você só precisará acessar a URL ![](http://localhost:8080/).
+Em seguida, você só precisará acessar o seu localhost com a porta 8080.
 
 <h2>
 
@@ -40,4 +40,4 @@ Se você preferir rodar as ferramentas serapadamente você também pode.
 
 `npm run serve`
 
-Você também precisará acessar a URL ![](http://localhost:8080/) para visualizar as mudanças em tempo real.
+Você também precisará acessar o seu localhost com a porta 8080 para visualizar as mudanças em tempo real.
