@@ -1,0 +1,30 @@
+/* Container */
+.inicio {
+  @apply h-240 lg:bg-cover bg-size-[100%] lg:bg-[url('/src/assets/images/banners/background-inicio.svg')] bg-[url('/src/assets/images/banners/background-inicio-mobile.svg')];
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* A linha azul no topo */
+.topbar {
+  @apply lg:block hidden w-full h-16 bg-primary;
+}
+
+/* Recebe os indices e a logo */
+.navbar {
+  @apply w-full flex lg:py-12 py-4 2xl:px-32 xl:px-10 px-5 lg:shadow-none shadow-lg text-primary 2xl:text-[2.4rem] lg:text-3xl justify-between items-center;
+
+  img {
+    @apply lg:h-auto h-12;
+  }
+}
+
+/* Indice */
+.indice {
+  @apply lg:grid grid-cols-4 gap-3 text-center w-4/5 hidden justify-between items-center;
+}
+
+.botao-contato {
+  @apply w-11/12 py-3 -mt-2 bg-primary text-white text-center rounded-xl;
+  box-shadow: 0px 5px 3px rgb(0, 0, 0, 0.2);
+}

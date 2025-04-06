@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import './apps/inicio.css';
+
+@theme {
+  /* Colors Custom */
+  --color-primary: #77ac98;
+  --color-accent: #03606e;
+  --color-base: #ececec;
+
+  /* Import font inter */
+  --font-inter: 'Inter', sans-serif;
+
+  /* Specific values */
+  --spacing-13: 3.25rem;
+  --spacing-15: 3.75rem;
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-26: 6.5rem;
+  --spacing-30: 7.5rem;
+  --spacing-50: 12.5rem;
+  --spacing-90: 22.5rem;
+
+  /* Bigger values */
+  --spacing-100: 25rem;
+  --spacing-120: 30rem;
+  --spacing-128: 32rem;
+  --spacing-140: 35rem;
+  --spacing-160: 40rem;
+  --spacing-180: 45rem;
+  --spacing-192: 48rem;
+  --spacing-200: 50rem;
+  --spacing-240: 60rem;
+  --spacing-256: 64rem;
+  --spacing-280: 70rem;
+  --spacing-320: 80rem;
+  --spacing-360: 90rem;
+  --spacing-400: 100rem;
+  --spacing-480: 120rem;
+
+  /* Fractional values */
+  --spacing-1/2: calc(1 / 2 * 100%);
+  --spacing-1/3: calc(1 / 3 * 100%);
+  --spacing-2/3: calc(2 / 3 * 100%);
+  --spacing-1/4: calc(1 / 4 * 100%);
+  --spacing-2/4: calc(2 / 4 * 100%);
+  --spacing-3/4: calc(3 / 4 * 100%);
+}
+
+.font-sans {
+  font-family: var(--font-inter);
+}
+
+body {
+  @apply bg-base;
+}
