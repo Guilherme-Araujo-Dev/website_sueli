@@ -22,6 +22,8 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
     }
   }
 }
@@ -33,15 +35,33 @@
       "Courier New", monospace;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --leading-normal: 1.5;
     --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-primary: #77ac98;
     --color-base: #ececec;
     --font-inter: 'Inter', sans-serif;
+    --spacing-18: 4.5rem;
     --spacing-240: 60rem;
+    --spacing-280: 70rem;
+    --spacing-320: 80rem;
+    --spacing-1\/2: calc(1 / 2 * 100%);
+    --spacing-2\/3: calc(2 / 3 * 100%);
   }
 }
 @layer base {
@@ -196,14 +216,26 @@
   height: var(--spacing-240);
   background-image: url('/src/assets/images/banners/background-inicio-mobile.svg');
   background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  @media (width >= 40rem) {
+    height: var(--spacing-280);
+  }
+  @media (width >= 48rem) {
+    height: var(--spacing-320);
+  }
+  @media (width >= 64rem) {
+    height: var(--spacing-240);
+  }
   @media (width >= 64rem) {
     background-image: url('/src/assets/images/banners/background-inicio.svg');
   }
   @media (width >= 64rem) {
     background-size: cover;
   }
-  background-position: center;
-  background-repeat: no-repeat;
+  @media (width >= 64rem) {
+    background-position: center;
+  }
 }
 .topbar {
   display: none;
@@ -246,21 +278,43 @@
   }
   img {
     height: calc(var(--spacing) * 12);
+    @media (width >= 48rem) {
+      height: var(--spacing-18);
+    }
     @media (width >= 64rem) {
       height: auto;
     }
   }
 }
 .indice {
-  display: none;
-  width: calc(4/5 * 100%);
+  display: grid;
+  width: 100%;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
   justify-content: space-between;
   gap: calc(var(--spacing) * 3);
   text-align: center;
   @media (width >= 64rem) {
-    display: grid;
+    width: calc(4/5 * 100%);
+  }
+  a {
+    @media (width < 64rem) {
+      display: none;
+    }
+  }
+  .menu-colapsado {
+    grid-column-start: 4;
+    cursor: pointer;
+    justify-self: flex-end;
+    @media (width >= 64rem) {
+      display: none;
+    }
+    img {
+      height: calc(var(--spacing) * 6);
+      @media (width >= 40rem) {
+        height: calc(var(--spacing) * 8);
+      }
+    }
   }
 }
 .botao-contato {
@@ -271,6 +325,90 @@
   padding-block: calc(var(--spacing) * 3);
   text-align: center;
   color: var(--color-white);
+  box-shadow: 0px 5px 3px rgb(0, 0, 0, 0.2);
+}
+.container-inicio {
+  margin-inline: auto;
+  margin-top: calc(var(--spacing) * 6);
+  display: flex;
+  width: calc(4/5 * 100%);
+  flex-direction: column;
+  padding-block: calc(var(--spacing) * 8);
+  text-align: center;
+  @media (width >= 64rem) {
+    margin-inline: calc(var(--spacing) * 0);
+  }
+  @media (width >= 64rem) {
+    width: var(--spacing-1\/2);
+  }
+  @media (width >= 64rem) {
+    padding-inline: calc(var(--spacing) * 10);
+  }
+  @media (width >= 80rem) {
+    padding-inline: calc(var(--spacing) * 28);
+  }
+}
+.main-text {
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  --tw-leading: var(--leading-normal);
+  line-height: var(--leading-normal);
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary);
+  @media (width >= 48rem) {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  @media (width >= 64rem) {
+    --tw-leading: calc(var(--spacing) * 14);
+    line-height: calc(var(--spacing) * 14);
+  }
+  @media (width >= 80rem) {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+}
+.sub-text {
+  margin-top: calc(var(--spacing) * 8);
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  @media (width >= 48rem) {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  @media (width >= 80rem) {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+}
+.botao-contato-texto {
+  margin-top: calc(var(--spacing) * 12);
+  width: var(--spacing-2\/3);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-primary);
+  padding-block: calc(var(--spacing) * 3);
+  text-align: center;
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
+  color: var(--color-white);
+  @media (width >= 48rem) {
+    width: calc(2/5 * 100%);
+  }
+  @media (width >= 48rem) {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  @media (width >= 64rem) {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  @media (width >= 96rem) {
+    font-size: 2.4rem;
+  }
   box-shadow: 0px 5px 3px rgb(0, 0, 0, 0.2);
 }
 .font-sans {
@@ -368,4 +506,12 @@ body {
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }

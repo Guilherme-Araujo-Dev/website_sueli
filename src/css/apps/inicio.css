@@ -1,8 +1,7 @@
 /* Container */
+
 .inicio {
-  @apply h-240 lg:bg-cover bg-size-[100%] lg:bg-[url('/src/assets/images/banners/background-inicio.svg')] bg-[url('/src/assets/images/banners/background-inicio-mobile.svg')];
-  background-position: center;
-  background-repeat: no-repeat;
+  @apply lg:h-240 md:h-320 sm:h-280 h-240 bg-no-repeat lg:bg-cover bg-size-[100%] lg:bg-[url('/src/assets/images/banners/background-inicio.svg')] bg-[url('/src/assets/images/banners/background-inicio-mobile.svg')] lg:bg-center bg-bottom;
 }
 
 /* A linha azul no topo */
@@ -15,16 +14,46 @@
   @apply w-full flex lg:py-12 py-4 2xl:px-32 xl:px-10 px-5 lg:shadow-none shadow-lg text-primary 2xl:text-[2.4rem] lg:text-3xl justify-between items-center;
 
   img {
-    @apply lg:h-auto h-12;
+    @apply lg:h-auto md:h-18 h-12;
   }
 }
 
 /* Indice */
 .indice {
-  @apply lg:grid grid-cols-4 gap-3 text-center w-4/5 hidden justify-between items-center;
+  @apply grid grid-cols-4 gap-3 text-center lg:w-4/5 w-full justify-between items-center;
+
+  a {
+    @apply max-lg:hidden;
+  }
+
+  .menu-colapsado {
+    @apply lg:hidden col-start-4 justify-self-end cursor-pointer;
+
+    img {
+      @apply sm:h-8 h-6;
+    }
+  }
 }
 
 .botao-contato {
   @apply w-11/12 py-3 -mt-2 bg-primary text-white text-center rounded-xl;
+  box-shadow: 0px 5px 3px rgb(0, 0, 0, 0.2);
+}
+
+.container-inicio {
+  @apply flex flex-col lg:w-1/2 w-4/5 xl:px-28 lg:px-10 py-8 mt-6 lg:mx-0 mx-auto text-center;
+
+}
+
+.main-text {
+  @apply text-primary xl:text-5xl md:text-4xl text-2xl font-extrabold lg:leading-14 leading-normal;
+}
+
+.sub-text {
+  @apply text-primary xl:text-2xl md:text-xl text-lg font-bold mt-8;
+}
+
+.botao-contato-texto {
+  @apply md:w-2/5 w-2/3 2xl:text-[2.4rem] lg:text-3xl md:text-xl text-lg mt-12 py-3 bg-primary text-white text-center rounded-xl;
   box-shadow: 0px 5px 3px rgb(0, 0, 0, 0.2);
 }
