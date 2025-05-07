@@ -33,6 +33,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
@@ -57,6 +58,8 @@
     --color-base: #ececec;
     --font-inter: 'Inter', sans-serif;
     --spacing-18: 4.5rem;
+    --spacing-30: 7.5rem;
+    --spacing-128: 32rem;
     --spacing-240: 60rem;
     --spacing-280: 70rem;
     --spacing-320: 80rem;
@@ -207,6 +210,10 @@
   }
 }
 @layer utilities {
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -410,6 +417,41 @@
     font-size: 2.4rem;
   }
   box-shadow: 0px 5px 3px rgb(0, 0, 0, 0.2);
+}
+.carousel {
+  position: relative;
+  display: flex;
+  height: var(--spacing-128);
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+.carousel-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-button {
+  position: absolute;
+  z-index: 10;
+  margin-inline: var(--spacing-30);
+  display: flex;
+  height: calc(var(--spacing) * 10);
+  width: calc(var(--spacing) * 10);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(infinity * 1px);
+  opacity: 100%;
+  img {
+    fill: var(--color-red-500);
+  }
+}
+.prev-button {
+  left: calc(var(--spacing) * 4);
+}
+.next-button {
+  right: calc(var(--spacing) * 4);
 }
 .font-sans {
   font-family: var(--font-inter);

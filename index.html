@@ -1,62 +1,97 @@
 <!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sueli de Araújo - Criando e Co-criando</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="src/assets/images/logos/favicon.ico" />
+    <link href="src/css/output.css" rel="stylesheet" />
+    <link href="src/css/apps/carousel.css" rel="stylesheet" />
+    <script src="src/js/carousel.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sueli de Araújo - Criando e Co-criando</title>
-  <link rel="icon" type="image/x-icon" href="src/assets/images/logos/favicon.ico" />
-  <link href="src/css/output.css" rel="stylesheet" />
-</head>
+  <header class="topbar"></header>
 
-<header class="topbar"></header>
+  <body>
+    <!-- Inicio -->
+    <div class="inicio">
+      <div class="navbar">
+        <img src="./src/assets/images/logos/logo-main.svg" />
 
-<body>
-  <!-- Inicio -->
-  <div class="inicio">
-    <div class="navbar">
+        <nav class="indice">
+          <a href="#sobreMim">Sobre mim</a>
+          <a href="#constelacao">Constelações</a>
+          <a href="#atendimentos">Atendimentos</a>
+          <a href="#contato">
+            <button class="botao-contato">
+              <p>Contato</p>
+            </button>
+          </a>
 
-      <img src="./src/assets/images/logos/logo-main.svg" />
+          <button class="menu-colapsado">
+            <img src="./src/assets/images/icons/collapsed-menu.svg" />
+          </button>
+        </nav>
+      </div>
 
-      <nav class="indice">
-        <a href="#sobreMim">Sobre mim</a>
-        <a href="#constelacao">Constelações</a>
-        <a href="#atendimentos">Atendimentos</a>
+      <div class="container-inicio">
+        <h1 class="main-text">
+          Um espaço seguro para sua transformação e crescimento!
+        </h1>
+
+        <p class="sub-text">
+          Encontre suporte para resgatar sua essência, fortalecer a
+          autoconfiança e superar desafios com leveza e propósito. Minha missão
+          é guiá-la no autoconhecimento e empoderamento por meio de uma
+          abordagem integrativa e acolhedora
+        </p>
+
         <a href="#contato">
-          <button class="botao-contato">
+          <button class="botao-contato-texto">
             <p>Contato</p>
           </button>
         </a>
-
-
-        <button class="menu-colapsado">
-          <img src="./src/assets/images/icons/collapsed-menu.svg">
-        </button>
-      </nav>
+      </div>
     </div>
 
-    <div class="container-inicio">
-      <h1 class="main-text">
-        Um espaço seguro para sua transformação e crescimento!
-      </h1>
+    <!-- Carousel -->
 
+    <section class="carousel" aria-label="Gallery">
+      <!-- Left Button -->
+      <button class="carousel-button prev-button" id="prev-button">
+        <img
+          src="./src/assets/images/icons/chevron-left.svg"
+          width="300"
+          alt="Seta para a esquerda" />
+      </button>
 
-      <p class="sub-text">
-        Encontre suporte para resgatar sua essência, fortalecer a autoconfiança e superar desafios com leveza e
-        propósito. Minha missão é guiá-la no autoconhecimento e empoderamento por meio de uma abordagem integrativa e
-        acolhedora
-      </p>
+      <!-- Carousel Images-->
+      <div id="carousel-list" class="carousel-list">
+        <img
+          class="carousel-image"
+          src="./src/assets/images/carousel/1.svg"
+          alt="Imagem 1" />
+        <img
+          class="carousel-image"
+          src="./src/assets/images/carousel/2.svg"
+          alt="Imagem 2" />
+        <img
+          class="carousel-image"
+          src="./src/assets/images/carousel/3.svg"
+          alt="Imagem 3" />
+      </div>
 
-      <a href="#contato">
-        <button class="botao-contato-texto">
-          <p>Contato</p>
-        </button>
-      </a>
-    </div>
-
-
-  </div>
-
-</body>
-
+      <!-- Rigth Button -->
+      <button class="carousel-button next-button" id="next-button">
+        <img
+          src="./src/assets/images/icons/chevron-right.svg"
+          width="300"
+          alt="Seta para a direita" />
+      </button>
+    </section>
+  </body>
 </html>
