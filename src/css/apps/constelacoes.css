@@ -6,3 +6,43 @@
     @apply mt-18;
   }
 }
+
+.constelacao-texto {
+  @apply flex flex-col text-primary text-center;
+
+  h4 {
+    @apply w-11/12 sm:w-5/6 my-10 sm:my-30 lg:my-48 mx-auto text-2xl sm:text-3xl lg:text-5xl font-extrabold text-primary leading-tight;
+  }
+}
+
+.img-layout {
+  @apply flex flex-wrap justify-around gap-16 w-[90%] mx-auto my-10;
+
+  div {
+    @apply w-full sm:w-2/3 lg:w-[30%] text-center;
+
+    label {
+      @apply flex mx-auto mb-5 w-3/5 text-[1.75rem] font-bold text-primary h-30 xl:h-20;
+    }
+
+    img {
+      @apply mx-auto h-36;
+    }
+
+    ul {
+      @apply flex flex-col mt-10 list-none p-0 m-0 gap-5 text-start text-lg sm:text-2xl;
+    }
+  }
+
+  div:nth-child(n + 4) {
+    @apply lg:w-1/4;
+
+    label {
+      @apply lg:w-full max-[1777px]:h-30;
+    }
+
+    img {
+      @apply lg:h-24;
+    }
+  }
+}
