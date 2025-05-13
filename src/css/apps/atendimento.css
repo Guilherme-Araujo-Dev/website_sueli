@@ -1,13 +1,13 @@
 .atendimentos {
   @apply bg-no-repeat lg:bg-cover bg-size-[100%] lg:bg-[url('/src/assets/images/banners/background-atendimento.svg')] bg-[url('/src/assets/images/banners/background-atendimento-mobile.svg')] lg:bg-center bg-top;
-  @apply flex flex-col text-primary xl:text-5xl sm:text-3xl text-xl font-bold w-full md:h-280 h-auto max-md:py-5 xl:px-52 px-[5%] mt-30 mx-auto;
+  @apply flex flex-col text-primary xl:text-5xl sm:text-3xl text-xl font-bold w-full md:min-h-240 sm:min-h-280 max-md:py-5 xl:px-52 px-[5%] mt-30 mx-auto;
 }
 
 .container-atendimentos {
-  @apply w-[93%] mx-auto mt-30 ml-18;
+  @apply w-[93%] mx-auto mt-12 md:mt-30 lg:ml-18;
 
   h4 {
-    @apply text-6xl ml-10;
+    @apply text-5xl md:text-6xl lg:ml-10 text-center lg:text-start;
   }
 
   div {
@@ -16,16 +16,20 @@
 }
 
 .card-atendimento {
-  @apply flex flex-col text-white bg-primary mt-10 h-auto w-full py-20 px-50 rounded-[4rem] gap-10;
+  @apply flex flex-col text-white bg-primary mt-10 h-auto w-full py-10 md:py-20 px-10 md:px-20 xl:px-50 rounded-[4rem] gap-10;
 
-  box-shadow:
-    -40px 20px 0px 0 #3a818c,
-    0px 20px 0px 0 #3a818c;
+  box-shadow: -20px 20px 0px 0 #3a818c;
+
+  @media (width >=64rem) {
+    box-shadow:
+      -40px 20px 0px 0 #3a818c,
+      0px 20px 0px 0 #3a818c;
+  }
 }
 
 .expansive-panel {
   img {
-    @apply transition-all duration-300 ease-in-out;
+    @apply max-sm:h-7 transition-all duration-300 ease-in-out;
   }
 }
 
@@ -33,12 +37,12 @@
   @apply flex cursor-pointer;
 
   h4 {
-    @apply text-4xl ml-4;
+    @apply text-2xl sm:text-3xl md:text-4xl ml-4 text-start;
   }
 }
 
 .content {
-  @apply mt-5 text-2xl font-normal hidden;
+  @apply mt-5 ml-5 text-lg md:text-2xl font-normal hidden;
 }
 
 .active-panel {
@@ -48,5 +52,9 @@
 }
 
 .tipo-atendimento {
-  @apply flex w-full text-center text-4xl justify-center mt-20;
+  @apply flex w-full text-center text-xl md:text-4xl justify-center mt-20 md:mb-20;
+
+  h5 {
+    @apply w-2/3;
+  }
 }
