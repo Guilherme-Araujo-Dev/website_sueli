@@ -910,6 +910,80 @@ html {
     width: var(--spacing-2\/3);
   }
 }
+.contato {
+  background-image: url('/src/assets/images/banners/background-contato-mobile.svg');
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  @media (width >= 64rem) {
+    background-image: url('/src/assets/images/banners/background-contato.svg');
+  }
+  @media (width >= 64rem) {
+    background-size: cover;
+  }
+  margin-inline: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  @media (width >= 48rem) {
+    min-height: 34rem;
+  }
+  h4 {
+    margin-inline: auto;
+    margin-top: calc(var(--spacing) * 24);
+    width: calc(2/5 * 100%);
+    text-align: center;
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    @media (width >= 40rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+    @media (width >= 80rem) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
+}
+.container-contato {
+  margin-inline: auto;
+  margin-top: calc(var(--spacing) * 12);
+  display: flex;
+  width: var(--spacing-2\/3);
+  justify-content: space-around;
+  @media (width >= 48rem) {
+    margin-top: var(--spacing-30);
+  }
+}
+.item-contato {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  color: var(--color-primary);
+  img {
+    height: calc(var(--spacing) * 20);
+    width: calc(var(--spacing) * 20);
+  }
+}
+.contato-text {
+  margin-left: calc(var(--spacing) * 5);
+  display: flex;
+  flex-direction: column;
+}
+.container-footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: calc(var(--spacing) * 1);
+  background-color: #3a818c;
+  padding-block: calc(var(--spacing) * 2);
+  text-align: center;
+  color: var(--color-white);
+}
 .font-sans {
   font-family: var(--font-inter);
 }

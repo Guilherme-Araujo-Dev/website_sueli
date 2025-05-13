@@ -1,0 +1,28 @@
+.contato {
+  @apply bg-no-repeat lg:bg-cover bg-size-[100%] lg:bg-[url('/src/assets/images/banners/background-contato.svg')] bg-[url('/src/assets/images/banners/background-contato-mobile.svg')] bg-top;
+  @apply flex flex-col w-full md:min-h-[34rem] mx-auto;
+
+  h4 {
+    @apply text-primary text-center mt-24 mx-auto xl:text-5xl sm:text-3xl text-xl font-bold w-2/5;
+  }
+}
+
+.container-contato {
+  @apply flex w-2/3 justify-around mx-auto mt-12 md:mt-30;
+}
+
+.item-contato {
+  @apply flex text-primary text-2xl items-center;
+
+  img {
+    @apply w-20 h-20;
+  }
+}
+
+.contato-text {
+  @apply flex flex-col ml-5;
+}
+
+.container-footer {
+  @apply flex gap-1 justify-center w-full text-center bg-[#3a818c] text-white py-2;
+}

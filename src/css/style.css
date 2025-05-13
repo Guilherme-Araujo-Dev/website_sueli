@@ -5,6 +5,7 @@
 @import './apps/about.css';
 @import './apps/constelacoes.css';
 @import './apps/atendimento.css';
+@import './apps/contato.css';
 
 @theme {
   /* Colors Custom */
