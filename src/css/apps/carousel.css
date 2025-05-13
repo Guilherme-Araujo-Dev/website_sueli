@@ -1,5 +1,5 @@
 .carousel {
-  @apply relative flex items-center w-full h-128 overflow-hidden;
+  @apply relative flex items-center w-full lg:h-128 h-auto overflow-hidden;
 }
 
 /* Container Images Carousel */
@@ -9,10 +9,6 @@
 
 .carousel-button {
   @apply mx-30 absolute z-10 flex items-center justify-center w-10 h-10 rounded-full opacity-100 cursor-pointer;
-
-  img {
-    @apply fill-red-500;
-  }
 }
 
 .prev-button {

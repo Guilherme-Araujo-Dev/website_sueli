@@ -1,5 +1,9 @@
 /* Container */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .inicio {
   @apply lg:h-240 md:h-320 sm:h-280 h-240 bg-no-repeat lg:bg-cover bg-size-[100%] lg:bg-[url('/src/assets/images/banners/background-inicio.svg')] bg-[url('/src/assets/images/banners/background-inicio-mobile.svg')] lg:bg-center bg-bottom;
 }
