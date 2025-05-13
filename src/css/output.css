@@ -24,6 +24,8 @@
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-duration: initial;
+      --tw-ease: initial;
     }
   }
 }
@@ -47,11 +49,17 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
+    --font-weight-normal: 400;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --leading-tight: 1.25;
     --leading-normal: 1.5;
     --radius-xl: 0.75rem;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-primary: #77ac98;
@@ -59,6 +67,7 @@
     --font-inter: 'Inter', sans-serif;
     --spacing-18: 4.5rem;
     --spacing-30: 7.5rem;
+    --spacing-50: 12.5rem;
     --spacing-128: 32rem;
     --spacing-240: 60rem;
     --spacing-280: 70rem;
@@ -731,6 +740,120 @@ html {
     }
   }
 }
+.atendimentos {
+  background-image: url('/src/assets/images/banners/background-atendimento-mobile.svg');
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  @media (width >= 64rem) {
+    background-image: url('/src/assets/images/banners/background-atendimento.svg');
+  }
+  @media (width >= 64rem) {
+    background-size: cover;
+  }
+  @media (width >= 64rem) {
+    background-position: center;
+  }
+  margin-inline: auto;
+  margin-top: var(--spacing-30);
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  padding-inline: 5%;
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  @media (width < 48rem) {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  @media (width >= 40rem) {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  @media (width >= 48rem) {
+    height: var(--spacing-280);
+  }
+  @media (width >= 80rem) {
+    padding-inline: calc(var(--spacing) * 52);
+  }
+  @media (width >= 80rem) {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+}
+.container-atendimentos {
+  margin-inline: auto;
+  margin-top: var(--spacing-30);
+  margin-left: var(--spacing-18);
+  width: 93%;
+  h4 {
+    margin-left: calc(var(--spacing) * 10);
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+  div {
+    width: 100%;
+  }
+}
+.card-atendimento {
+  margin-top: calc(var(--spacing) * 10);
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 10);
+  border-radius: 4rem;
+  background-color: var(--color-primary);
+  padding-inline: var(--spacing-50);
+  padding-block: calc(var(--spacing) * 20);
+  color: var(--color-white);
+  box-shadow: -40px 20px 0px 0 #3a818c, 0px 20px 0px 0 #3a818c;
+}
+.expansive-panel {
+  img {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
+}
+.panel {
+  display: flex;
+  cursor: pointer;
+  h4 {
+    margin-left: calc(var(--spacing) * 4);
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+}
+.content {
+  margin-top: calc(var(--spacing) * 5);
+  display: none;
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+}
+.active-panel {
+  img {
+    rotate: 90deg;
+  }
+}
+.tipo-atendimento {
+  margin-top: calc(var(--spacing) * 20);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--text-4xl);
+  line-height: var(--tw-leading, var(--text-4xl--line-height));
+}
 .font-sans {
   font-family: var(--font-inter);
 }
@@ -832,6 +955,14 @@ body {
   inherits: false;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
   syntax: "*";
   inherits: false;
 }

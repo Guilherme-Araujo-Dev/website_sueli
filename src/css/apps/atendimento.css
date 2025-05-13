@@ -1,0 +1,52 @@
+.atendimentos {
+  @apply bg-no-repeat lg:bg-cover bg-size-[100%] lg:bg-[url('/src/assets/images/banners/background-atendimento.svg')] bg-[url('/src/assets/images/banners/background-atendimento-mobile.svg')] lg:bg-center bg-top;
+  @apply flex flex-col text-primary xl:text-5xl sm:text-3xl text-xl font-bold w-full md:h-280 h-auto max-md:py-5 xl:px-52 px-[5%] mt-30 mx-auto;
+}
+
+.container-atendimentos {
+  @apply w-[93%] mx-auto mt-30 ml-18;
+
+  h4 {
+    @apply text-6xl ml-10;
+  }
+
+  div {
+    @apply w-full;
+  }
+}
+
+.card-atendimento {
+  @apply flex flex-col text-white bg-primary mt-10 h-auto w-full py-20 px-50 rounded-[4rem] gap-10;
+
+  box-shadow:
+    -40px 20px 0px 0 #3a818c,
+    0px 20px 0px 0 #3a818c;
+}
+
+.expansive-panel {
+  img {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+.panel {
+  @apply flex cursor-pointer;
+
+  h4 {
+    @apply text-4xl ml-4;
+  }
+}
+
+.content {
+  @apply mt-5 text-2xl font-normal hidden;
+}
+
+.active-panel {
+  img {
+    @apply rotate-90;
+  }
+}
+
+.tipo-atendimento {
+  @apply flex w-full text-center text-4xl justify-center mt-20;
+}

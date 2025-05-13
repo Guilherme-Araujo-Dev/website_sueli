@@ -4,6 +4,7 @@
 @import './apps/carousel.css';
 @import './apps/about.css';
 @import './apps/constelacoes.css';
+@import './apps/atendimento.css';
 
 @theme {
   /* Colors Custom */
