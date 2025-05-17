@@ -40,7 +40,7 @@ html {
 }
 
 .botao-contato {
-  @apply w-11/12 py-3 -mt-2 bg-primary text-white text-center rounded-xl;
+  @apply w-11/12 py-3 -mt-2 bg-primary text-white text-center rounded-xl cursor-pointer;
   box-shadow: 0px 5px 3px rgb(0, 0, 0, 0.2);
 }
 
@@ -57,6 +57,6 @@ html {
 }
 
 .botao-contato-texto {
-  @apply md:w-2/5 w-2/3 2xl:text-[2.4rem] lg:text-3xl md:text-xl text-lg mt-12 py-3 bg-primary text-white text-center rounded-xl;
+  @apply md:w-2/5 w-2/3 2xl:text-[2.4rem] lg:text-3xl md:text-xl text-lg mt-12 py-3 bg-primary text-white text-center rounded-xl cursor-pointer;
   box-shadow: 0px 5px 3px rgb(0, 0, 0, 0.2);
 }
