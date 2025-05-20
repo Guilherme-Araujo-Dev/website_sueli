@@ -3,7 +3,7 @@
 }
 
 .container-text-about {
-  @apply max-lg:h-full lg:col-start-3 lg:row-start-auto max-lg:row-start-5 max-[54rem]:row-start-4 max-[42rem]:row-start-3 max-sm:row-start-5 max-[36rem]:row-start-4 max-[30rem]:row-start-3 row-span-3 lg:col-span-3 text-primary my-10 max-[24rem]:-mt-1/2;
+  @apply max-lg:h-full lg:col-start-3 lg:row-start-auto max-lg:row-start-5 max-[54rem]:row-start-4 max-[42rem]:row-start-3 max-sm:row-start-5 max-[36rem]:row-start-4 max-[30rem]:row-start-3 row-span-3 lg:col-span-3 text-primary my-10 max-[24rem]:-mt-3/5;
 
   h4 {
     @apply sm:text-3xl text-lg font-extrabold text-center max-sm:px-4;

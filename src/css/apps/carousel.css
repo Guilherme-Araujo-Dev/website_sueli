@@ -1,10 +1,24 @@
 .carousel {
-  @apply relative flex items-center w-full lg:h-128 h-auto overflow-hidden;
+  @apply relative flex items-center w-full lg:h-128 h-160 overflow-hidden;
+
+  @media (max-width: 64rem) {
+    @apply bg-[url('/src/assets/images/carousel/bg-carousel.svg')];
+  }
 }
 
 /* Container Images Carousel */
 .carousel-list {
-  @apply flex items-center justify-center;
+  @apply flex items-center max-lg:h-128;
+
+  @media (max-width: 64rem) {
+    @apply grid grid-cols-[100vw_100vw_100vw];
+
+    /* Define que cada coluna deve ocupar o tamanho da tela inteira */
+
+    div {
+      @apply justify-center;
+    }
+  }
 }
 
 .carousel-item {
@@ -14,20 +28,47 @@
   @apply flex flex-col justify-center;
 }
 
+.carousel-item {
+  @media (max-width: 64rem) {
+    /* @apply bg-size-[50%] bg-no-repeat my-20 rounded-full border; */
+    @apply h-3/4 rounded-4xl;
+  }
+}
+
 .carousel-item:nth-child(1) {
-  @apply bg-[url('/src/assets/images/carousel/1.svg')];
+  @apply lg:bg-[url('/src/assets/images/carousel/1.svg')];
+
+  @media (max-width: 64rem) {
+    @apply col-start-1 -mt-10;
+
+    .carousel-content {
+      @apply bg-[url('/src/assets/images/carousel/1m.svg')] bg-no-repeat bg-cover bg-center;
+    }
+  }
 }
 
 .carousel-item:nth-child(2) {
-  @apply bg-[url('/src/assets/images/carousel/2.svg')];
+  @apply lg:bg-[url('/src/assets/images/carousel/2.svg')] max-lg:col-start-2;
+
+  @media (max-width: 64rem) {
+    .carousel-content {
+      @apply bg-[url('/src/assets/images/carousel/2m.svg')] bg-no-repeat bg-cover bg-center;
+    }
+  }
 }
 
 .carousel-item:nth-child(3) {
-  @apply bg-[url('/src/assets/images/carousel/3.svg')];
+  @apply lg:bg-[url('/src/assets/images/carousel/3.svg')] max-lg:col-start-3;
+
+  @media (max-width: 64rem) {
+    .carousel-content {
+      @apply bg-[url('/src/assets/images/carousel/3m.svg')] bg-no-repeat bg-cover bg-center;
+    }
+  }
 }
 
 .carousel-content {
-  @apply text-center w-1/2 ml-10;
+  @apply text-center w-1/2 lg:ml-10;
 
   h4 {
     @apply text-accent lg:text-5xl font-semibold;
@@ -36,6 +77,18 @@
   button {
     @apply bg-accent text-white lg:text-4xl py-3 px-12 rounded-xl mt-7 shadow-xl cursor-pointer;
   }
+
+  @media (max-width: 64rem) {
+    @apply rounded-4xl h-128 w-3/4 sm:w-1/2 mx-auto;
+
+    h4 {
+      @apply text-2xl mt-8 px-10;
+    }
+
+    button {
+      @apply hidden;
+    }
+  }
 }
 
 .carousel-button {
@@ -43,7 +96,7 @@
 }
 
 .dots-carousel {
-  @apply flex gap-3 left-1/2 w-full bottom-4 transform -translate-x-1/2;
+  @apply flex gap-3 left-1/2 w-full bottom-4 transform -translate-x-1/2 max-lg:mb-15;
 }
 
 .dot {
@@ -52,6 +105,10 @@
 
 .dot.active {
   @apply bg-accent;
+}
+
+.mobile-button {
+  @apply lg:hidden absolute bottom-5 left-1/4 w-1/2 h-12 bg-accent text-white text-2xl font-semibold rounded-xl shadow-xl cursor-pointer;
 }
 
 .prev-button {

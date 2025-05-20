@@ -3,7 +3,7 @@
   @apply flex flex-col text-center justify-center text-white xl:text-5xl sm:text-3xl text-xl font-bold w-full md:h-128 h-auto max-md:py-5 xl:px-52 px-[5%];
 
   p {
-    @apply mt-18;
+    @apply mt-6 md:mt-18 max-sm:text-lg;
   }
 }
 
